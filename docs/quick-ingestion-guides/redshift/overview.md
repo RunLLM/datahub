@@ -17,7 +17,7 @@ Upon completing this guide, you will have a recurring ingestion pipeline that wi
 This recurring ingestion pipeline will also extract:
 
 * **Usage statistics** to help you understand recent query activity
-* **Table-level lineage** (where available) to automatically define interdependencies between datasets
+* **Table-level lineage** (where available) to automatically define interdependencies between datasets, limited to a maximum of 20 entries per table
 * **Table- and column-level profile statistics** to help you understand the shape of the data
 
 :::caution

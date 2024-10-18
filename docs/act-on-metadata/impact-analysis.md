@@ -86,7 +86,7 @@ This means you have not yet ingested Lineage metadata for that entity. Please se
 
 **Why is my list of exported dependencies incomplete?**
 
-We currently limit the list of dependencies to 10,000 records; we suggest applying filters to narrow the result set if you hit that limit.
+We currently limit the list of dependencies to 10,000 records; we suggest applying filters to narrow the result set if you hit that limit. Additionally, for Redshift ingestion, there is a limit of 20 lineage entries per table, which may affect the completeness of lineage data for high-traffic tables.t.
 
 
 

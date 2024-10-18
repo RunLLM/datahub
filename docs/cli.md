@@ -725,7 +725,7 @@ Please see our [Integrations page](https://datahubproject.io/integrations) if yo
 | [oracle](./generated/ingestion/sources/oracle.md)                                              | `pip install 'acryl-datahub[oracle]'`                      | Oracle source                           |
 | [postgres](./generated/ingestion/sources/postgres.md)                                          | `pip install 'acryl-datahub[postgres]'`                    | Postgres source                         |
 | [redash](./generated/ingestion/sources/redash.md)                                              | `pip install 'acryl-datahub[redash]'`                      | Redash source                           |
-| [redshift](./generated/ingestion/sources/redshift.md)                                          | `pip install 'acryl-datahub[redshift]'`                    | Redshift source                         |
+| [redshift](./generated/ingestion/sources/redshift.md)                                          | `pip install 'acryl-datahub[redshift]'`                    | Redshift source (limited to 20 copy lineage entries per table) |
 | [sagemaker](./generated/ingestion/sources/sagemaker.md)                                        | `pip install 'acryl-datahub[sagemaker]'`                   | AWS SageMaker source                    |
 | [snowflake](./generated/ingestion/sources/snowflake.md)                                        | `pip install 'acryl-datahub[snowflake]'`                   | Snowflake source                        |
 | [sqlalchemy](./generated/ingestion/sources/sqlalchemy.md)                                      | `pip install 'acryl-datahub[sqlalchemy]'`                  | Generic SQLAlchemy source               |
