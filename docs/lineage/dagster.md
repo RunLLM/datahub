@@ -208,3 +208,31 @@ def asset_lineage_extractor(
 ### Connection Error for DataHub Rest URL
 
 If you get `ConnectionError: HTTPConnectionPool(host='localhost', port=8080)`, then in that case your DataHub GMS service is not up.
+
+### Using SQL Query Parsing to Extract Lineage
+
+DataHub's Dagster integration can automatically capture dataset inputs and outputs for Software Defined assets from the SQL queries it runs by parsing the SQL. Simply add the executed query to the Asset Metadata with the `Query` tag.
+
+Here is an example of a Software Defined Asset annotated with the Query:
+
+```python
+def my_asset_table_a(snowflake: SnowflakeResource) -> MaterializeResult:
+    query = """
+        create or replace table db_name.schema_name.my_asset_table_a as (
+            SELECT *
+            FROM db_name.schema_name.my_asset_table_b
+        );
+    """
+    with snowflake.get_connection() as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query)
+    return MaterializeResult( # Adding query to metadata to use it getting lineage from it with SQL parser
+        metadata={
+            "Query": MetadataValue.text(query),
+        }
+    )
+```
+
+For the above example, the plugin will automatically extract and set the upstream lineage as `db_name.schema_name.my_asset_table_b`.
+
+[See a full example job here](https://github.com/datahub-project/datahub/blob/master/metadata-ingestion-modules/dagster-plugin/examples/iris.py).
