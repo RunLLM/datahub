@@ -76,7 +76,18 @@ to the YAML configuration, instead of creating new Snapshot / Aspect files.
 
 ## Exploring DataHub's Metadata Model
 
-To explore the current DataHub metadata model, you can inspect this high-level picture that shows the different entities and edges between them showing the relationships between them. 
+To explore the current DataHub metadata model, you can inspect this high-level picture that shows the different entities and edges between them showing the relationships between them.
+
+## Dagster Integration Enhancements
+
+Recent updates to the Dagster integration with DataHub have introduced several new features and improvements:
+
+- **Asset Metadata Handling**: New parameters and methods have been added to the DataHub sensors for improved job monitoring and asset metadata handling.
+- **Lineage Tracking**: A new Lineage class has been introduced to track asset relationships more effectively.
+- **Configuration Options**: Expanded configuration options for asset management with detailed descriptions.
+- **SQL Query Parsing**: The integration can now automatically capture dataset inputs and outputs from SQL queries by parsing the SQL.
+
+These enhancements aim to provide better visibility and management of data assets within Dagster, leveraging DataHub's metadata capabilities. 
 
 <p align="center">
   <img width="70%"  src="https://raw.githubusercontent.com/datahub-project/static-assets/main/imgs/datahub-metadata-model.png"/>
