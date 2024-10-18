@@ -31,7 +31,7 @@ All the commands below support the following options:
 
 ### Selecting entities to delete
 
-You can either provide a single urn to delete, or use filters to select a set of entities to delete.
+You can either provide a single urn to delete, or use filters to select a set of entities to delete. Filters can now be specified using AND/OR conditions for more flexible querying.
 
 ```shell
 # Soft delete a single urn.
