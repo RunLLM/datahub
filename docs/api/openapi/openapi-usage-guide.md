@@ -548,7 +548,7 @@ dependencies {
 
 ### Writing metadata events to the /platform endpoints
 
-The following code emits metadata events through OpenAPI by constructing a list of `UpsertAspectRequest`s. Behind the scenes, this is using the **/platform/entities/v1** endpoint to send metadata to GMS.
+The following code emits metadata events through OpenAPI by constructing a list of `UpsertAspectRequest`s. Behind the scenes, this is using the **/platform/entities/v1** endpoint to send metadata to GMS. Additionally, the new Dagster integration features allow for capturing asset lineage and metadata more effectively, which can be emitted using similar methods.
 
 ```java
 import io.datahubproject.openapi.generated.DatasetProperties;
@@ -588,7 +588,7 @@ public class Main {
 ### Conditional Writes
 
 All the create/POST endpoints for aspects support `headers` in the POST body to support batch APIs. See the docs in the
-[MetadataChangeProposal](../../advanced/mcp-mcl.md) section for the use of these headers to support conditional writes semantics.
+[MetadataChangeProposal](../../advanced/mcp-mcl.md) section for the use of these headers to support conditional writes semantics. The new Dagster integration enhancements also support conditional writes for asset metadata, allowing for more efficient data management.
 
 ### Batch Get
 

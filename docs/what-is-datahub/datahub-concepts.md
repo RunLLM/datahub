@@ -53,7 +53,7 @@ Deprecation is an aspect that indicates the deprecation status of an entity. Typ
 
 ### Ingestion Source
 
-Ingestion sources refer to the data systems that we are extracting metadata from. For example, we have sources for BigQuery, Looker, Tableau and many others.
+Ingestion sources refer to the data systems that we are extracting metadata from. For example, we have sources for BigQuery, Looker, Tableau, Dagster, and many others.
 
 > - [Sources](/metadata-ingestion/README.md#sources)
 > - [DataHub Integrations](https://datahubproject.io/integrations)
@@ -107,7 +107,7 @@ Reference : [data_platforms.yaml](https://github.com/datahub-project/datahub/blo
 
 ### Dataset
 
-Datasets represent collections of data that are typically represented as Tables or Views in a database (e.g. BigQuery, Snowflake, Redshift etc.), Streams in a stream-processing environment (Kafka, Pulsar etc.), bundles of data found as Files or Folders in data lake systems (S3, ADLS, etc.).
+Datasets represent collections of data that are typically represented as Tables or Views in a database (e.g. BigQuery, Snowflake, Redshift, Dagster etc.), Streams in a stream-processing environment (Kafka, Pulsar etc.), bundles of data found as Files or Folders in data lake systems (S3, ADLS, etc.).
 
 > - [Developer Guides: Dataset](/docs/generated/metamodel/entities/dataset.md)
 

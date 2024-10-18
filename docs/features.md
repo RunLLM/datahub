@@ -18,6 +18,8 @@ This extensible metadata management platform is built for developers to tame the
 
 ## Key Features
 
+- **Dagster Integration**: Enhanced integration with Dagster, including improved asset metadata handling, lineage tracking, and expanded configuration options for better job monitoring.
+
 <FeatureCardSection/>
 
 ## Get Started
