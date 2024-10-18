@@ -145,6 +145,7 @@ The following features are next on the roadmap for Data Products
 * [Domains](./domains.md)
 * [Glossary Terms](./glossary/business-glossary.md)
 * [Tags](./tags.md)
+* [Dagster Integration](./lineage/dagster.md)
 
 
 
