@@ -1140,7 +1140,7 @@ curl -X POST 'http://localhost:8080/entities?action=search' \
 
 ###### Filtering
 
-In addition to performing full-text search, you can also filter explicitly against fields marked as @Searchable in the corresponding aspect PDLs.
+In addition to performing full-text search, you can also filter explicitly against fields marked as @Searchable in the corresponding aspect PDLs. The filtering can be done using either AND or OR conditions, but not both simultaneously.
 
 For example, to perform filtering for a chart with title "Baz Chart 1", you could issue the following query:
 
