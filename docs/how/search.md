@@ -207,7 +207,7 @@ query searchEntities {
 
 ### Searching at Scale
 
-For queries that return more than 10k entities we recommend using the [scrollAcrossEntities](https://datahubproject.io/docs/graphql/queries/#scrollacrossentities) GraphQL API: 
+For queries that return more than 10k entities, or when using indexed queries with AND/OR filters, we recommend using the [scrollAcrossEntities](https://datahubproject.io/docs/graphql/queries/#scrollacrossentities) GraphQL API: 
 
 ```
 # Example query
@@ -267,7 +267,7 @@ In order to complete scrolling through all of the results, continue to request d
 
 ## Customizing Search
 
-It is possible to completely customize search ranking, filtering, and queries using a search configuration yaml file.
+The new `search_by_filters` method allows for indexed queries using AND/OR filters, enhancing search capabilities. Additionally, it is possible to completely customize search ranking, filtering, and queries using a search configuration yaml file.
 This no-code solution provides the ability to extend, or replace, the Elasticsearch-based search functionality. The
 only limitation is that the information used in the query/ranking/filtering must be present in the entities' document,
 however this does include `customProperties`, `tags`, `terms`, `domain`, as well as many additional fields.
