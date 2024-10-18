@@ -272,6 +272,7 @@ New (optional fields `systemMetadata` and `headers`):
   Otherwise, we recommend soft deleting all databricks data via the DataHub CLI:
   `datahub delete --platform databricks --soft` and then reingesting with `include_metastore: false`.
 - #8846 - Changed enum values in resource filters used by policies. `RESOURCE_TYPE` became `TYPE` and `RESOURCE_URN` became `URN`.
+- Added support for indexed queries with URNs in platform resources, allowing the use of 'and' and 'or' filters. Ensure that only one type of filter is provided at a time to avoid errors.
   Any existing policies using these filters (i.e. defined for particular `urns` or `types` such as `dataset`) need to be upgraded
   manually, for example by retrieving their respective `dataHubPolicyInfo` aspect and changing part using filter i.e.
 

@@ -364,6 +364,11 @@ Collection includes a POST, GET, and DELETE for a single entity with a SchemaMet
                   "description": "(Required) A list of raw urn strings, only supports a single entity type per request."
                 },
                 {
+                  "key": "filters",
+                  "value": "{\"and\": [{\"field\": \"resourceType\", \"condition\": \"EQUAL\", \"value\": \"test_resource_type\"}], \"or\": []}",
+                  "description": "Optional filters to apply to the query, supporting 'and' and 'or' conditions."
+                },
+                {
                   "key": "urns",
                   "value": "labore dolor exercitation in",
                   "description": "(Required) A list of raw urn strings, only supports a single entity type per request.",
